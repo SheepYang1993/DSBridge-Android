@@ -1,12 +1,11 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion '25.0.3'
+    compileSdkVersion 28
     defaultConfig {
         applicationId "wendu.jsbdemo"
         minSdkVersion 11
-        targetSdkVersion 23
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
@@ -23,14 +22,14 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('androidx.test.espresso:espresso-core:3.1.0', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile project(path: ':dsbridge')
-    compile 'androidx.appcompat:appcompat:1.0.0'
-    compile 'com.squareup.okhttp3:okhttp:3.3.0'
-    testCompile 'junit:junit:4.12'
+    implementation project(path: ':dsbridge')
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.3.0'
+    testImplementation 'junit:junit:4.12'
 }
 
 
